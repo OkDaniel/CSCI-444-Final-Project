@@ -22,9 +22,9 @@ Our project investigates how **esports professionals** compare to **software eng
 
 Each member of **Group 9** is responsible for one part of this story:
 
-- **Duy Nguyen** – *Esports section*: age and experience of esports players, game-level earnings, and which games dominate the top-earning professionals.
-- **Bat-Orgil Erdenebat** – *Software engineer salary section* (US/state-level maps, world map).
-- **Daniel Jimenez** – *Software engineer career / experience section* (state map, Leaflet or additional widgets).
+-   **Duy Nguyen** – *Esports section*: age and experience of esports players, game-level earnings, and which games dominate the top-earning professionals.
+-   **Bat-Orgil Erdenebat** – *Software engineer salary section* (US/state-level maps, world map).
+-   **Daniel Jimenez** – *Software engineer career / experience section* (state map, Leaflet or additional widgets).
 
 Together, these sections form a complete comparison between esports and software engineering careers.
 
@@ -50,7 +50,7 @@ glimpse(team_perf)
 glimpse(games)
 ```
 
----
+------------------------------------------------------------------------
 
 # Duy's Esports Section (Group 9)
 
@@ -58,28 +58,28 @@ glimpse(games)
 
 Instructor feedback for **Group 9** asked us to:
 
-- Compare **ages** of esports professionals and discuss how long it takes to “make it”.
-- Look at different **esports games**, because some games might produce much higher earnings than others.
-- Examine how long those games have been around and whether long-running titles have an advantage.
+-   Compare **ages** of esports professionals and discuss how long it takes to “make it”.
+-   Look at different **esports games**, because some games might produce much higher earnings than others.
+-   Examine how long those games have been around and whether long-running titles have an advantage.
 
 For my part of the project I use:
 
-- **Dataset 1 (SCRAPED):** `esports_players_top1000_clean.csv` – top 1000 players by total earnings, scraped from *EsportsEarnings*.
-- **Dataset 2 (Kaggle – age & experience):** `esports_team_performance_clean.csv` – team / player-level statistics including age, experience, and performance.
-- **Dataset 3 (Kaggle – game earnings):** `general_esport_games_clean.csv` – game-level earnings and release years.
+-   **Dataset 1 (SCRAPED):** `esports_players_top1000_clean.csv` – top 1000 players by total earnings, scraped from *EsportsEarnings*.
+-   **Dataset 2 (Kaggle – age & experience):** `esports_team_performance_clean.csv` – team / player-level statistics including age, experience, and performance.
+-   **Dataset 3 (Kaggle – game earnings):** `general_esport_games_clean.csv` – game-level earnings and release years.
 
 My section includes:
 
-- A **histogram** and **bar chart** (ggplot),
-- A **Plotly html widget** with a new feature (x-axis range slider),
-- A formatted **table using kableExtra**,
-- And at least one dataset wrangled with **four different dplyr verbs** (`group_by`, `summarise`, `mutate`, `filter`).
+-   A **histogram** and **bar chart** (ggplot),
+-   A **Plotly html widget** with a new feature (x-axis range slider),
+-   A formatted **table using kableExtra**,
+-   And at least one dataset wrangled with **four different dplyr verbs** (`group_by`, `summarise`, `mutate`, `filter`).
 
----
+------------------------------------------------------------------------
 
 ## Question 1 – What is the typical age and experience profile of esports professionals?
 
-**Question 1:**  
+**Question 1:**\
 *What does the age and experience distribution look like for esports players in our Kaggle performance dataset, and what does this imply about the “window” when players tend to compete?*
 
 We first summarise the age and experience of players, then visualise the age distribution and explore how age relates to performance.
@@ -175,11 +175,11 @@ The interactive scatter plot lets us zoom in on different age ranges using the r
 
 Combining the histogram and the scatter plot, Question 1 indicates that the esports career arc is compressed: players accumulate a few years of experience, reach high performance in their early twenties, and then relatively few remain in the top tier as they get older.
 
----
+------------------------------------------------------------------------
 
 ## Question 2 – Do older esports titles generate more total prize money?
 
-**Question 2:**  
+**Question 2:**\
 *Among major esports games, is there a relationship between how long a game has been around and the total prize money it has generated?*
 
 We now turn to the **game-level Kaggle dataset**, which contains total earnings and release years for a variety of esports titles.
@@ -277,11 +277,11 @@ The table lists the ten games with the largest prize pools. **Dota 2** alone has
 
 Overall, Question 2 suggests that **time in the market matters**: older games have had more opportunities to host tournaments and distribute prize money. However, success is not guaranteed; only certain titles translate longevity into sustained earnings.
 
----
+------------------------------------------------------------------------
 
 ## Question 3 – Which games dominate the top-earning players?
 
-**Question 3:**  
+**Question 3:**\
 *Among the top 1000 highest-earning players, which games appear most often and capture the largest share of total player earnings?*
 
 Here we use the **scraped EsportsEarnings dataset** and create a pipeline with at least **four dplyr verbs**.
@@ -395,19 +395,256 @@ The table lists individual players with the largest career earnings. All of the 
 
 Question 3 shows that the **earnings landscape is highly concentrated**: a small set of games and a relatively small number of players capture a large fraction of total prize money. For an aspiring professional, this means that choosing which game to focus on is almost as important as individual skill.
 
----
+------------------------------------------------------------------------
 
 # Overall Conclusion for Duy's Esports Section
 
 Across my three questions, the esports data paints a consistent picture:
 
-1. **Age and experience:**  
-   Players in our dataset are mostly in their late teens and early twenties, with just a few years of experience. Performance seems to peak within this narrow window, suggesting that esports careers tend to be intense but short.
+1.  **Age and experience:**\
+    Players in our dataset are mostly in their late teens and early twenties, with just a few years of experience. Performance seems to peak within this narrow window, suggesting that esports careers tend to be intense but short.
 
-2. **Game age and prize money:**  
-   Long‑running titles usually have higher cumulative prize pools, but only some games convert longevity into sustained earnings. A few successful titles dominate the market, while many others remain relatively small.
+2.  **Game age and prize money:**\
+    Long‑running titles usually have higher cumulative prize pools, but only some games convert longevity into sustained earnings. A few successful titles dominate the market, while many others remain relatively small.
 
-3. **Concentration among games and players:**  
-   Among the top 1000 earners, prize money is heavily concentrated in a short list of games and a small group of players. Almost all of the biggest earners rely on one primary game for the majority of their income.
+3.  **Concentration among games and players:**\
+    Among the top 1000 earners, prize money is heavily concentrated in a short list of games and a small group of players. Almost all of the biggest earners rely on one primary game for the majority of their income.
 
 These results show that esports careers offer high potential rewards but also significant risk and a limited time window. In the full Group 9 report, my esports findings will be compared with the software‑engineer sections to understand how these patterns differ from more traditional technical careers in terms of income stability, career length, and long‑term opportunities.
+
+# Daniel's Software Engineer Career & Cost-of-Living Section (Group 9)
+
+**This section (coding + analysis) is written by: Daniel Jimenez.**
+
+While Duy’s esports section focuses on prize money and short, intense careers, my section looks at the **software engineer side** of our comparison. Here, the focus is on:
+
+-   How **software developer salaries** vary across U.S. metro areas
+-   How much those salaries stretch after **cost of living and rent**
+-   How stable and broad the opportunities are compared with the very concentrated esports earnings
+
+I use the following dataset:
+
+-   **Software developer income and expenses per U.S. metro** – `SofwareDeveloperIncomeExpensesperUSACity.csv`\
+    This file includes adjusted and unadjusted software developer salaries, number of jobs, median home price, and several cost-of-living metrics for different metro areas.
+
+```{r}
+#| label: load-data-daniel
+#| echo: true
+# Daniel's dataset: software developer salary + cost of living by U.S. metro
+
+sw <- readr::read_csv("data/SofwareDeveloperIncomeExpensesperUSACity.csv")
+
+glimpse(sw)
+```
+
+## Question 4 – Which cities give software engineers the best "effective" pay?
+
+**Question 4:**  *Which U.S. metro areas give software developers the best balance between salary and cost of living, and how different are the top cities from the rest?*
+
+To answer this, I build a simple “effective pay” metric that compares adjusted software developer salary to cost of living plus rent. This tells us where developers get the most value for their income.
+
+### 4.1 Four-pipe wrangling: compute effective pay and find top cities
+
+```{r}
+#| label: q4-effective-pay-wrangle
+#| echo: true
+
+# question 4: wrangle metro-level data to compute "effective pay"
+
+# this pipeline uses 4+ dplyr verbs that count for the piping requirement:
+
+# - mutate(), filter(), arrange(), group_by() + summarise() (for sanity check)
+
+sw_effective <- sw %>%
+mutate(
+adj_salary = `Mean Software Developer Salary (adjusted)`,
+col_rent   = `Cost of Living Plus Rent avg`,
+effective_pay_index = adj_salary / col_rent
+) %>%                                   # 1) mutate
+filter(!is.na(effective_pay_index)) %>% # 2) filter
+arrange(desc(effective_pay_index))      # 3) arrange
+
+# sanity check by state: average effective pay per state (4) group_by + summarise
+
+state_check <- sw_effective %>%
+tidyr::separate(Metro, into = c("metro_name", "state_abbrev"), sep = ", ") %>%
+group_by(state_abbrev) %>%
+summarise(
+mean_effective_pay = mean(effective_pay_index, na.rm = TRUE),
+.groups = "drop"
+)
+
+head(sw_effective)
+```
+
+### 4.2 Bar chart – Top 10 metros by effective pay
+
+```{r}
+#| label: q4-effective-pay-bar
+#| echo: true
+#| fig-cap: "Top 10 U.S. metros where software developer pay stretches the furthest after cost of living and rent"
+
+# question 4: bar chart of top 10 metros by effective pay index
+
+sw_effective %>%
+slice_head(n = 10) %>%
+ggplot(aes(
+x = reorder(Metro, effective_pay_index),
+y = effective_pay_index
+)) +
+geom_col(fill = "#1f78b4") +
+coord_flip() +
+labs(
+title = "Top 10 Metros by Effective Software Developer Pay",
+x = "Metro area",
+y = "Effective pay index\n(adjusted salary / cost of living + rent)"
+)
+```
+
+**Narrative: The top metros provide strong adjusted salaries relative to living costs. Unlike esports, where only a tiny group achieves high earnings, software engineers have multiple cities offering strong financial outcomes.**
+
+## Question 5 – How does cost of living trade off with salary?
+
+**Question 5:**  *Do the highest-paying metros always have the best cost of living, or is there a trade-off between salary level and day-to-day expenses?*
+
+### 5.1 Scatterplot – Salary vs cost of living
+
+```{r}
+#| label: q5-salary-vs-col
+#| echo: true
+#| fig-cap: "Relationship between adjusted software developer salary and cost of living plus rent by metro"
+
+# question 5: scatter plot of salary vs cost of living
+
+ggplot(sw, aes(
+x = `Cost of Living Plus Rent avg`,
+y = `Mean Software Developer Salary (adjusted)`
+)) +
+geom_point(alpha = 0.7, color = "#1f78b4") +
+labs(
+title = "Do Higher Salaries Always Beat High Living Costs?",
+x = "Cost of living + rent (index)",
+y = "Adjusted software developer salary (USD)"
+)
+```
+
+### 5.2 Histogram – Distribution of adjusted salaries
+
+```{r}
+#| label: q5-salary-hist
+#| echo: true
+#| fig-cap: "Histogram of adjusted software developer salaries across U.S. metros"
+
+# question 5: histogram of adjusted software developer salaries
+
+ggplot(sw, aes(x = `Mean Software Developer Salary (adjusted)`)) +
+geom_histogram(binwidth = 5000, color = "white", fill = "#33a02c") +
+labs(
+title = "Distribution of Adjusted Software Developer Salaries",
+x = "Adjusted software developer salary (USD)",
+y = "Number of metros"
+)
+```
+
+## Question 6 – How far ahead are software developers compared to typical workers?
+
+**Question 6:**  *By how much do software developer salaries beat the average salary for all occupations in a metro, and which cities offer the biggest gap?*
+
+### 6.1 Compute salary advantage vs all occupations (table)
+
+```{r}
+#| label: q6-advantage-wrangle
+#| echo: true
+#| results: "asis"
+
+sw_advantage <- sw %>%
+mutate(
+dev_salary_unadj = `Mean Software Developer Salary (unadjusted)`,
+all_occ_salary   = `Mean Unadjusted Salary (all occupations)`,
+salary_advantage = dev_salary_unadj - all_occ_salary,
+salary_ratio     = dev_salary_unadj / all_occ_salary
+) %>%
+arrange(desc(salary_advantage))
+
+top10_advantage <- sw_advantage %>%
+slice_head(n = 10) %>%
+select(
+Metro,
+dev_salary_unadj,
+all_occ_salary,
+salary_advantage,
+salary_ratio
+)
+
+top10_advantage %>%
+mutate(
+dev_salary_unadj = round(dev_salary_unadj, 0),
+all_occ_salary   = round(all_occ_salary, 0),
+salary_advantage = round(salary_advantage, 0),
+salary_ratio     = round(salary_ratio, 2)
+) %>%
+kbl(
+col.names = c(
+"Metro",
+"Developer salary (USD)",
+"All-occupation salary (USD)",
+"Advantage (USD)",
+"Developer / All-occupation ratio"
+),
+caption = "Top 10 metros where software developers earn the most above the average worker"
+) %>%
+kable_paper(full_width = FALSE) %>%
+kable_styling(position = "center") %>%
+column_spec(4, bold = TRUE)
+```
+
+### 6.2 Plotly html widget – Salary advantage vs number of jobs
+
+```{r}
+#| label: q6-advantage-plotly
+#| echo: true
+#| fig-cap: "Interactive Plotly scatter of salary advantage vs number of developer jobs"
+
+q6_plotly <- plotly::plot_ly(
+data = sw_advantage,
+x = ~`Number of Software Developer Jobs`,
+y = ~salary_advantage,
+type = "scatter",
+mode = "markers",
+size = ~`Number of Software Developer Jobs`,
+sizemode = "area",
+sizeref = 2 * max(sw_advantage$`Number of Software Developer Jobs`, na.rm = TRUE) / 100^2,
+hovertemplate = paste(
+"<b>%{text}</b><br>",
+"Jobs: %{x}<br>",
+"Salary advantage: $%{y:.0f}<extra></extra>"
+),
+text = ~Metro
+) %>%
+layout(
+title = "Where Do High-Paying Developer Jobs Cluster?",
+xaxis = list(
+title = "Number of software developer jobs",
+rangeslider = list(visible = TRUE)
+),
+yaxis = list(
+title = "Developer salary advantage vs all occupations (USD)"
+)
+)
+
+q6_plotly
+```
+
+# Overall Conclusion for Daniel's Software Engineer Section
+
+**Software engineering shows:**
+
+**1.** Many cities with strong income after cost of living
+
+**2.** Stable, predictable salaries rather than esports volatility
+
+**3.** A consistent salary premium over typical workers
+
+**4.** A career path that lasts 25–35 years, not a 5–7 year peak window
+
+Together, these findings help explain why SWE is a long-term, stable career, in contrast with the high-risk, short-window earning structure of esports.
