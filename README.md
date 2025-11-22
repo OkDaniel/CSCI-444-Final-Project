@@ -8,21 +8,26 @@ The project compares career patterns and earnings of **esports professionals** a
 
 ## Duy Nguyen – Esports Section
 
-This part of the project focuses on **esports players and games**:
+This part of the project focuses on **esports players and games**.
 
-- Scraped the **Top 1000 highest-earning players** from  
-  `https://www.esportsearnings.com/players/highest-earnings`.
-- Combined this with two Kaggle-based esports datasets:
-  - Player / team age and experience  
-    - *(Kaggle)*: [Esports team performance dataset](PASTE_KAGGLE_LINK_HERE_1)
-  - Game-level earnings and release years  
-    - *(Kaggle)*: [General esports games dataset](PASTE_KAGGLE_LINK_HERE_2)
-- Cleaned all data using **tidyverse** and saved to `data/` as:
-  - `esports_players_top1000_clean.csv`
-  - `esports_team_performance_clean.csv`
-  - `general_esport_games_clean.csv`
+Data sources:
 
-Main questions answered in the Quarto report:
+- **Scraped website**  
+  - Top 1000 highest-earning players:  
+    `https://www.esportsearnings.com/players/highest-earnings`
+- **Kaggle datasets**
+  - Player / team age and performance:  
+    [Esport_dataset – darvinjawton](https://www.kaggle.com/datasets/darvinjawton/esport-dataset)
+  - Game-level earnings and prize pools:  
+    [Esports Earnings 1998–2023 – rankirsh](https://www.kaggle.com/datasets/rankirsh/esports-earnings/data)
+
+Cleaned data (saved in `data/`):
+
+- `esports_players_top1000_clean.csv`
+- `esports_team_performance_clean.csv`
+- `general_esport_games_clean.csv`
+
+Main questions in the esports analysis:
 
 1. **Age & experience** – What does the age and experience distribution of esports professionals look like?  
 2. **Game age & prize money** – Do older esports titles tend to generate more total prize money?  
@@ -32,7 +37,7 @@ All analysis, visualisations, and narrative for the esports section are in:
 
 - `Duy_Quarto_Esports.qmd`  
   - Renders to **HTML** and **PDF**  
-  - Uses `code-fold`, `ggplot2`, `plotly`, and `kableExtra`
+  - Uses `ggplot2`, `plotly`, and `kableExtra` with `code-fold` enabled.
 
 ---
 
